@@ -1,0 +1,131 @@
+// general styles
+// CSS style reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::selection {
+    background-color: $pri_blue;
+    color: $white;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: $pri_dark;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Montserrat', sans-serif;
+
+  @include responsive_small {
+    font-size: 16px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.noselect {
+  user-select: none;
+}
+
+// preloader
+#preloader {
+  background: $pri_light url(../img/loading.svg) no-repeat center center;
+  background-size: 10%;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+// Back to Top
+.back-to-top {
+  @include flex(center, center);
+  cursor: pointer;
+  width: 40px;
+  height: 42.5px;
+  color: $white;
+  border-radius: 9px;
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  background-color: $pri_light;
+  z-index: 100;
+
+  i {
+    font-size: 17.5px;
+  }
+}
+
+.btn {
+  width: 150px;
+  font-weight: 600;
+  padding: 13px;
+  background-color: $pri_light;
+  color: $white;
+  transition: 200ms all ease-in-out;
+  font-size: 13.5px;
+
+  @include responsive_large {
+    width: 130px;
+    padding: 10px;
+  }
+
+  @include responsive_medium {
+    width: 120px;
+    padding: 10px 5px;
+  }
+
+  &:hover {
+    background-color: $pri_blue;
+    border-color: transparent;
+    color: $white;
+    transform: translateY(-4.5px);
+  }
+
+  &-sm {
+    width: 80px;
+    font-size: 12px;
+    padding: 6px 13px;
+  }
+
+  &-outline {
+    background-color: transparent !important;
+    border-color: $pri_light !important;
+    color: $pri_light;
+
+    &:hover {
+      color: $pri_blue;
+    }
+  }
+}

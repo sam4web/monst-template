@@ -1,0 +1,59 @@
+.navbar {
+  .navbar-brand img {
+    width: 140px;
+  }
+
+  .nav-item {
+    padding: 0 12px;
+
+    @include responsive_medium {
+      padding: 0 5px;
+    }
+  }
+
+  .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $pri_dark;
+
+    &:hover {
+      color: $pri_grey;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// scroll active
+.scroll-active {
+  z-index: 100;
+  top: 0;
+  position: fixed;
+  background: #ffffffe6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  animation: scroll-active 350ms ease-in-out forwards;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+
+  .toggle-btn {
+    top: 32px;
+  }
+}
+
+@keyframes scroll-active {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

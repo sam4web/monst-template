@@ -1,0 +1,114 @@
+// styles for home page
+
+.blue-wd {
+  color: $pri_blue;
+  font-weight: 700;
+}
+
+h2 {
+  max-width: 400px;
+  font-size: 36px;
+  line-height: 51.2px;
+
+  @include responsive_large {
+    font-size: 29px;
+    line-height: 41px;
+  }
+}
+
+.hero {
+  h1,
+  p {
+    max-width: 500px;
+  }
+
+  h1 {
+    font-size: 48px;
+    max-width: 520px;
+    line-height: 64px;
+
+    @include responsive_large {
+      font-size: 39px;
+      line-height: 43px;
+    }
+  }
+
+  p {
+    color: $pri_grey;
+    line-height: 28px;
+  }
+}
+
+.hero-scroll-active {
+  padding-top: 94.5px !important;
+  // margin-top: 70.5px;
+}
+
+.service {
+  &-item {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    max-width: 290px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    transition: 250ms all ease-in-out;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+      transform: translateY(-10px);
+    }
+
+    i {
+      font-size: 35px;
+      color: $pri_light;
+    }
+
+    h3 {
+      font-size: 19px;
+      line-height: 24px;
+      color: $pri_dark;
+    }
+
+    p {
+      color: $pri_grey;
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 250px;
+      margin: auto;
+    }
+  }
+}
+
+.about {
+  p {
+    max-width: 500px;
+    color: $pri_grey;
+    line-height: 28px;
+  }
+
+  li {
+    position: relative;
+
+    .decimal {
+      position: absolute;
+      font-size: 18px;
+      font-weight: 600;
+      top: -15px;
+      left: -65px;
+      color: $pri_blue;
+      background-color: #eff6ff;
+      padding: 10px 18px;
+      border-radius: 40px;
+    }
+
+    h3 {
+      font-size: 23px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 400;
+      line-height: 30px;
+    }
+  }
+}

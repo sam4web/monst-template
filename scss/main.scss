@@ -1,0 +1,17 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+// styles import
+@import './_responsive_mixins';
+@import './_mixins';
+@import './_colors';
+
+// general styles
+@import './_common';
+
+// sections
+@import './_navbar';
+@import './_footer';
+
+// pages
+@import './_home';
